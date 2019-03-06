@@ -153,17 +153,20 @@ extension JointViewController {
                 // draw line
                 self.jointView.bodyPoints = n_kpoints
                 
-                if let rightWrist = n_kpoints[4] {
-                    if rightWrist.maxConfidence > 0.5 {
-                        print(rightWrist.maxPoint)
-                        SuperSocketManager.shared.emit(eventName: "HAND:MOVE", data: ["x" : rightWrist.maxPoint.x,"y":rightWrist.maxPoint.y])
+                if let rightWrist = n_kpoints[4],
+                    let leftWrist = n_kpoints[7] {
+                    if rightWrist.maxConfidence > leftWrist.maxConfidence && rightWrist.maxConfidence > 0.5 {
+                        SuperSocketManager.shared.emit(eventName: "HAND:MOVE", data: ["x" : 1-rightWrist.maxPoint.x,"y":rightWrist.maxPoint.y])
+                    }
+                    else if leftWrist.maxConfidence > 0.5 {
+                        SuperSocketManager.shared.emit(eventName: "HAND:MOVE", data: ["x" : 1-leftWrist.maxPoint.x,"y":leftWrist.maxPoint.y])
                     }
                 }
                 
                 
                 
                 // show key points description
-                self.showKeypointsDescription(with: n_kpoints)
+                //self.showKeypointsDescription(with: n_kpoints)
                 
                 // end of measure
                 self.👨‍🔧.🎬🤚()

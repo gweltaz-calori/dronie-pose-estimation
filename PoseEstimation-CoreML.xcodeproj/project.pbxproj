@@ -27,6 +27,8 @@
 		673A4675222F1045006CFD94 /* SuperSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673A4674222F1045006CFD94 /* SuperSocketManager.swift */; };
 		7EA03DD42A520077EE2AABDD /* Pods_PoseEstimation_CoreMLTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE36FD5552E174A3D087930 /* Pods_PoseEstimation_CoreMLTests.framework */; };
 		878E985234DCC4844E3BF82B /* Pods_PoseEstimation_CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 884E82ABC5514E4C180FE11C /* Pods_PoseEstimation_CoreML.framework */; };
+		EDD86804222FB66500CE6077 /* hourglass.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EDD86802222FB66500CE6077 /* hourglass.mlmodel */; };
+		EDD86805222FB66500CE6077 /* model_cpm.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EDD86803222FB66500CE6077 /* model_cpm.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		884E82ABC5514E4C180FE11C /* Pods_PoseEstimation_CoreML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoseEstimation_CoreML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13ACEAE03D4AD8F25A2E166 /* Pods-PoseEstimation-CoreML.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoseEstimation-CoreML.debug.xcconfig"; path = "Target Support Files/Pods-PoseEstimation-CoreML/Pods-PoseEstimation-CoreML.debug.xcconfig"; sourceTree = "<group>"; };
 		BC3B3ED814F91CAFF167ABAE /* Pods-PoseEstimation-CoreMLTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoseEstimation-CoreMLTests.debug.xcconfig"; path = "Target Support Files/Pods-PoseEstimation-CoreMLTests/Pods-PoseEstimation-CoreMLTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EDD86802222FB66500CE6077 /* hourglass.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = hourglass.mlmodel; sourceTree = "<group>"; };
+		EDD86803222FB66500CE6077 /* model_cpm.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = model_cpm.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,8 @@
 				557F531220ED252100CFCCD7 /* AppDelegate.swift */,
 				6725A292222F01E900216EA6 /* hourglass.mlmodel */,
 				6725A291222F01E900216EA6 /* model_cpm.mlmodel */,
+				EDD86802222FB66500CE6077 /* hourglass.mlmodel */,
+				EDD86803222FB66500CE6077 /* model_cpm.mlmodel */,
 				554F148C2203057400B828B0 /* Joint View Controller */,
 				554F148D2203058100B828B0 /* Heatmap View Controller */,
 				554F148E2203059B00B828B0 /* Utilities */,
@@ -371,12 +377,14 @@
 			files = (
 				55AAFB1C21128863000B21A3 /* HeatmapViewController.swift in Sources */,
 				557F531520ED252100CFCCD7 /* JointViewController.swift in Sources */,
+				EDD86804222FB66500CE6077 /* hourglass.mlmodel in Sources */,
 				554F14802202B39A00B828B0 /* MLMultiArray+PoseEstimation.swift in Sources */,
 				55AAFB1E21128AB6000B21A3 /* DrawingHeatmapView.swift in Sources */,
 				6725A294222F01E900216EA6 /* hourglass.mlmodel in Sources */,
 				557F532720ED25B000CFCCD7 /* VideoCapture.swift in Sources */,
 				673A4675222F1045006CFD94 /* SuperSocketManager.swift in Sources */,
 				6725A293222F01E900216EA6 /* model_cpm.mlmodel in Sources */,
+				EDD86805222FB66500CE6077 /* model_cpm.mlmodel in Sources */,
 				555B477421F61234009026AB /* DrawingJointView.swift in Sources */,
 				554F14822202B68300B828B0 /* UIImage+CVPixelBuffer.swift in Sources */,
 				557F532820ED25B000CFCCD7 /* Measure.swift in Sources */,

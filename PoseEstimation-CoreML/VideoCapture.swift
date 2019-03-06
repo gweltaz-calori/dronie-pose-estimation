@@ -17,7 +17,7 @@ public protocol VideoCaptureDelegate: class {
 public class VideoCapture: NSObject {
     public var previewLayer: AVCaptureVideoPreviewLayer?
     public weak var delegate: VideoCaptureDelegate?
-    public var fps = 15
+    public var fps = 30
     
     let captureSession = AVCaptureSession()
     let videoOutput = AVCaptureVideoDataOutput()

@@ -29,7 +29,7 @@ class JointViewController: UIViewController {
     private let 👨‍🔧 = 📏()
     
     // MARK - Core ML model
-    typealias EstimationModel = model_cpm
+    typealias EstimationModel = hourglass
     
     // MARK: - Vision Properties
     var request: VNCoreMLRequest?
@@ -155,12 +155,10 @@ extension JointViewController {
                 
                 if let rightWrist = n_kpoints[4],
                     let leftWrist = n_kpoints[7] {
-                    if rightWrist.maxConfidence > leftWrist.maxConfidence && rightWrist.maxConfidence > 0.5 {
+                    if rightWrist.maxConfidence > 0.2 {
                         SuperSocketManager.shared.emit(eventName: "HAND:MOVE", data: ["x" : 1-rightWrist.maxPoint.x,"y":rightWrist.maxPoint.y])
                     }
-                    else if leftWrist.maxConfidence > 0.5 {
-                        SuperSocketManager.shared.emit(eventName: "HAND:MOVE", data: ["x" : 1-leftWrist.maxPoint.x,"y":leftWrist.maxPoint.y])
-                    }
+                    
                 }
                 
                 
